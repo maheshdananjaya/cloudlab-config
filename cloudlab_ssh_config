@@ -1,0 +1,42 @@
+# cloudlab config
+ 
+Host n1
+    User maheshd
+    IdentityFile /afs/inf.ed.ac.uk/user/s17/s1797403/.ssh/celeste_cloudlab
+    HostName clnode257.clemson.cloudlab.us
+ 
+Host n2
+    User maheshd
+    IdentityFile /afs/inf.ed.ac.uk/user/s17/s1797403/.ssh/celeste_cloudlab
+    HostName clnode283.clemson.cloudlab.us
+ 
+Host n3
+    User maheshd
+    IdentityFile /afs/inf.ed.ac.uk/user/s17/s1797403/.ssh/celeste_cloudlab
+    HostName clnode282.clemson.cloudlab.us
+ 
+Host n4
+    User maheshd
+    IdentityFile /afs/inf.ed.ac.uk/user/s17/s1797403/.ssh/celeste_cloudlab
+    HostName clnode261.clemson.cloudlab.us
+ 
+Host n5
+    User maheshd
+    IdentityFile /afs/inf.ed.ac.uk/user/s17/s1797403/.ssh/celeste_cloudlab
+    HostName clnode253.clemson.cloudlab.us
+ 
+Host n6
+    User maheshd
+    IdentityFile /afs/inf.ed.ac.uk/user/s17/s1797403/.ssh/celeste_cloudlab
+    HostName clnode281.clemson.cloudlab.us
+ 
+Host n7
+    User maheshd
+    IdentityFile /afs/inf.ed.ac.uk/user/s17/s1797403/.ssh/celeste_cloudlab
+    HostName clnode280.clemson.cloudlab.us
+ 
+Host n8
+    User maheshd
+    IdentityFile /afs/inf.ed.ac.uk/user/s17/s1797403/.ssh/celeste_cloudlab
+    HostName clnode274.clemson.cloudlab.us
+ 
