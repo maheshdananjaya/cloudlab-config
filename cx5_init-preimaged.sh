@@ -83,9 +83,11 @@ bash build.sh -s
 #	./build.sh -s
 #fi
 #./build.sh -s
-cd 
 
-cp scripts/set* .
+cp scripts/set* ../
+cp scripts/run* .
+
+cd
 
 #sudo wget https://www.intel.com/content/dam/develop/external/us/en/documents/mlc_v3.9a.tgz
 #sudo tar xvzf mlc_v3.9a.tgz
