@@ -73,7 +73,7 @@ git clone https://github.com/maheshdananjaya/1KVS.git
 cd 1KVS
 #git checkout dam-baseline
 git checkout dam-rfd
-bash build -s
+bash build.sh -s
 #git submodule init
 #git submodule update
 #if [[ "${HOSTNAME:5:1}" == 1 ]]; 
