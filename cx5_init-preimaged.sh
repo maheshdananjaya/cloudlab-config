@@ -24,6 +24,8 @@ echo "alias nic-perf='sudo watch -n1 perfquery -x -r' " >> ~/.bashrc
 echo " " >> ~/.bashrc
 echo "export PATH=\"/users/maheshd/.local/bin:${PATH}\"" >> ~/.bashrc
 echo " " >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=\"/usr/local/lib:${LD_LIBRARY_PATH}\"" >> ~/.bashrc
+echo " " >> ~/.bashrc
 source ~/.bashrc
 
 # silence parallel citation without the manual "will-cite" after parallel --citation
@@ -42,6 +44,7 @@ ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
 rm -rf fasst
 rm -rf 1KVS
+rm -rf DAM-RFD
 
 sudo apt upgrade
 sudo apt update
@@ -52,20 +55,25 @@ git clone https://github.com/maheshdananjaya/fasst.git fasst
 cd fasst
 git fetch -a
 git checkout mahesh-dam
-cd app/tatp
-make -B
-cd ../smallbank
-make -B
+#cd app/tatp
+#make -B
+#cd ../smallbank
+#make -B
 cd
 
+sudo apt-get install -y libnuma-dev
+sudo apt install -y libsystemd-dev
 
-
-sudo apt install libsystemd-dev
+git clone https://github.com/maheshdananjaya/DAM-RFD.git
+cd DAM-RFD
+bash build_zk_client.sh
+cd
 
 git clone https://github.com/maheshdananjaya/1KVS.git
 cd 1KVS
 #git checkout dam-baseline
 git checkout dam-rfd
+bash build -s
 #git submodule init
 #git submodule update
 #if [[ "${HOSTNAME:5:1}" == 1 ]]; 
