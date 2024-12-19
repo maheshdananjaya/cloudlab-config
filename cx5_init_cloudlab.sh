@@ -27,7 +27,7 @@ ORDERED_HOST_NAMES=(
 CLOUDLAB_USERNAME="maheshd"
 SSH_CONFIG="${HOME}/.ssh/config"
 #SSH_CONFIG="/etc/ssh/ssh_config"
-CLOUDLAB_SSHKEY_FILE="${HOME}/.ssh/celeste_cloudlab"
+CLOUDLAB_SSHKEY_FILE="${HOME}/.ssh/cloudlab"
 
 SSH_PREFIX="n"
 CONFIG_NAME="cloudlab_ssh_config"
@@ -75,9 +75,11 @@ echo "Copying ssh_key and ${SCRIPT_TO_COPY_N_RUN} in cloudlab nodes: ${MACHINE_L
 parallel scp ${CLOUDLAB_SSHKEY_FILE} ${SSH_PREFIX}{}:${SSH_REMOTE_SSHKEY} ::: ${MACHINE_LIST_IDS}
 parallel scp ./${SCRIPT_TO_COPY_N_RUN} ${SSH_PREFIX}{}:~/${SCRIPT_TO_COPY_N_RUN} ::: ${MACHINE_LIST_IDS}
 
-#parallel scp ./${SCRIPT_TO_COPY_N_RUN_2} ${SSH_PREFIX}{}:~/${SCRIPT_TO_COPY_N_RUN_2} ::: ${MACHINE_LIST_IDS}
-#parallel scp ./${SCRIPT_TO_COPY_N_RUN_3} ${SSH_PREFIX}{}:~/${SCRIPT_TO_COPY_N_RUN_2} ::: ${MACHINE_LIST_IDS}
 
+parallel scp ./${SCRIPT_TO_COPY_N_RUN_2} ${SSH_PREFIX}{}:~/startexp.sh ::: ${MACHINE_LIST_IDS}
+parallel scp ./${SCRIPT_TO_COPY_N_RUN_3} ${SSH_PREFIX}{}:~/termexp.sh ::: ${MACHINE_LIST_IDS}
+parallel scp ./startfd.sh ${SSH_PREFIX}{}:~/startfd.sh ::: ${MACHINE_LIST_IDS}
+parallel scp ./termfd.sh ${SSH_PREFIX}{}:~/termfd.sh ::: ${MACHINE_LIST_IDS}
 
 #ssh n1
 #hostname -I | awk '{ print $1 }
