@@ -84,8 +84,8 @@ bash build.sh -s
 #fi
 #./build.sh -s
 
-cp scripts/set* ../
-cp scripts/run* .
+cp scrips/set* ../
+cp scrips/run* .
 
 cd
 
