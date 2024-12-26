@@ -80,7 +80,7 @@ parallel scp ./${SCRIPT_TO_COPY_N_RUN_2} ${SSH_PREFIX}{}:~/startexp.sh ::: ${MAC
 parallel scp ./${SCRIPT_TO_COPY_N_RUN_3} ${SSH_PREFIX}{}:~/termexp.sh ::: ${MACHINE_LIST_IDS}
 parallel scp ./startfd.sh ${SSH_PREFIX}{}:~/startfd.sh ::: ${MACHINE_LIST_IDS}
 parallel scp ./termfd.sh ${SSH_PREFIX}{}:~/termfd.sh ::: ${MACHINE_LIST_IDS}
-
+parallel scp ./setMemId.sh ${SSH_PREFIX}{}:~/setMemId.sh ::: ${MACHINE_LIST_IDS}
 #ssh n1
 #hostname -I | awk '{ print $1 }
 
